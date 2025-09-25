@@ -1,10 +1,9 @@
-# Use official Alpine-based n8n image
+# Use official n8n image (Alpine base)
 FROM n8nio/n8n:latest
 
-# Switch to root to install packages
+# Switch to root to install ffmpeg
 USER root
 
-# Install ffmpeg on Alpine
 RUN apk add --no-cache ffmpeg
 
 # Switch back to n8n user
